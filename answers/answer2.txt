@@ -1,0 +1,9 @@
+1/done
+2/pthread_create does NOT block the main thread(or at least that's what google told me) , so if the for loop write the new value of j to &j before the new thread take in the value (from &j) then this bug happens (that's why it's not always the same on each execution as well)
+3/ for that we can just allocate a new address space to each j value with something like 
+int *myid = malloc(sizeof(int));
+*myid = j;
+pthread_create(&tid[j], NULL, hello, (void *)myid);
+Done
+4/done
+
