@@ -1,4 +1,0 @@
-1/ because the code that increases mynum is gated behind if(childPID == 0), which only returns true when a children process calls it, for a parent it would return the child process ID
-2/ done
-3/ because the parent and the child are two separated processes, and done
-4/ in this specific case just run kill 47586 to kill the child process
